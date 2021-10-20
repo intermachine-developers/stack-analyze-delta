@@ -1,0 +1,47 @@
+{
+  "name": "stack-analyze-delta",
+  "version": "1.0.0",
+  "description": "new stack-analyze software",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "electron:linux": "electron-builder -l AppImage",
+    "electron:win": "electron-builder -w nsis"
+  },
+  "keywords": [
+    "analyze",
+    "stack"
+  ],
+  "author": "omega5300",
+  "build": {
+    "appId": "com.intermachinedevelopers.stack-analyze-delta",
+    "productName": "stack-analyze delta",
+    "asar": false,
+    "files": [
+      "app/**/*",
+      "main.js",
+      "icon.png",
+      "package.json",
+      "license.txt"
+    ],
+    "directories": {
+      "output": "./dist"
+    },
+    "copyright": "Intermachine Developers"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bulma": "^0.9.1",
+    "lyrics-finder": "^21.7.0",
+    "systeminformation": "^5.6.10",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.2",
+    "wappalyzer": "^6.5.22"
+  },
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.10.5",
+    "eslint": "^7.17.0"
+  }
+}
