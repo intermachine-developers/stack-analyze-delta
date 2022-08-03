@@ -1,0 +1,54 @@
+.container {
+  display: grid;
+  grid-template-areas: "cpu os ram"
+    "disk controller controller"
+    "disk display display";
+  gap: 5px;
+  margin-inline: 8px;
+  padding: 8px;
+}
+
+.title {
+  grid-area: title;
+  text-align: center;
+}
+
+.modal {
+  --background-glass: rgba(255, 255, 255, 0.18);
+  width: 80%;
+  margin-inline: auto;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+disk-info, controller-info, display-info {
+  overflow: auto;
+}
+
+cpu-info {
+  grid-area: cpu;
+}
+
+ram-info {
+  grid-area: ram;
+}
+
+disk-info {
+  grid-area: disk;
+}
+
+os-info {
+  grid-area: os;
+}
+
+controller-info {
+  grid-area: controller;
+}
+
+display-info {
+  grid-area: display;
+}

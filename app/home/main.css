@@ -1,0 +1,16 @@
+.fixed-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 8px;
+    margin-top: .75rem;
+    height: 60vh;
+    overflow: auto;
+    margin-inline: .5rem;
+}
+
+delta-card {
+    --image-shadow: #fff;
+    --card-btn-width: 40%;
+    --card-btn-height: 50px;
+    --card-btn: #3880ff;
+}

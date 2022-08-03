@@ -1,5 +1,5 @@
 // modules
-const { join } = require('path');
+const { join } = require('node:path');
 const { app, BrowserWindow, Menu, dialog } = require('electron');
 
 const isMac = process.platform === 'darwin';
@@ -13,12 +13,16 @@ function createWindow() {
     minHeight: 768,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      preload: join(__dirname, 'app/preload.js')
     },
-    icon: join(__dirname, 'icon.png')
+    icon: join(__dirname, './icon.png')
   });
 
-  function licenseWindow() {
+  mainWindow.loadFile('app/home/index.html');
+  mainWindow.once('ready-to-show', () => mainWindow.show());
+
+  const licenseWindow = () => {
     const license = new BrowserWindow({
       parent: mainWindow,
       width: 800,
@@ -30,11 +34,11 @@ function createWindow() {
       modal: true,
       show: false
     });
+
     license.setMenuBarVisibility(false);
     license.loadFile(join(__dirname, 'license.txt'));
     license.once('ready-to-show', () => license.show());
-  }
-
+  };
 
   const template = [
     ...(isMac ? [{
@@ -59,16 +63,26 @@ function createWindow() {
               stack-analyze tools: 
                 tech stack from npm version 1.0.4 - 1.0.5 
                 hardware informatio from npm version 1.1.0 
+                password generator from npm version 1.2.0 
               delta tools: 
                 lyrics finder 
                 cdn services
+                digimon cards services
             `,
               message: 'developers and design: omega5300'
             });
           }
         },
         {
+          label: 'clear results / show extra',
+          accelerator: process.platform === 'darwin' ? 'Comand+D' : 'Ctrl+D',
+          click() {
+            mainWindow.webContents.send('clear-results');
+          }
+        },
+        {
           label: 'show license',
+          accelerator: process.platform === 'darwin' ? 'Comand+L' : 'Ctrl+L',
           click() {
             licenseWindow();
           }
@@ -77,8 +91,6 @@ function createWindow() {
       ]
     }
   ];
-
-  mainWindow.loadFile(join(__dirname, 'app/index.html'));
 
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);

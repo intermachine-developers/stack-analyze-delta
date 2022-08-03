@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lirics finder</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <delta-navbar></delta-navbar>
+    <main>
+        <form id="query-lyrics" class="form glass">
+            <fieldset class="input-field input-container">
+                <input 
+                    id="artist"    
+                    class="input-field-text" 
+                    type="text" 
+                    placeholder="enter a artist or band name"
+                >
+                <input 
+                    id="song"   
+                    class="input-field-text" 
+                    type="text" 
+                    placeholder="enter a song name"
+                >
+            </fieldset>
+            <fieldset class="input-field">
+                <button class="btn" type="submit">start query lyric</button>
+            </fieldset>
+        </form>
+        <section class="lyrics-container glass">
+            <pre class="lyrics"></pre>
+        </section>
+    </main>
+    <script src="renderer.js"></script>
+</body>
+
+</html>

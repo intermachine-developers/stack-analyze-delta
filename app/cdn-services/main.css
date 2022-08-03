@@ -1,0 +1,41 @@
+.btn-container {
+  text-align: center;
+}
+
+.btn-copy {
+  all: unset;
+  cursor: pointer;
+  height: 2rem;
+  font-size: 2em;
+}
+
+.container {
+  overflow-y: auto;
+  height: 50vh;
+  margin-top: 10px;
+  margin-inline: auto;
+  width: 80vw;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-head {
+  background-color: var(--dark);
+  box-shadow: inset 0px -1px 0px #eee,
+    0px 5px 5px -5px rgba(0, 0, 0, .1);
+  position: sticky;
+  top: 0;
+  padding-bottom: 10px;
+}
+
+.table-body tr:nth-child(even) {
+  background-color: var(--dark);
+}
+
+td, th {
+  text-overflow: ellipsis;
+  padding: 6px;
+}

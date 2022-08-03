@@ -2,13 +2,13 @@ module.exports = {
   "env": {
     "browser": true,
     "commonjs": true,
-    "es2021": true,
+    "es2022": true,
     "node": true
   },
   "extends": [
   ],
   "parserOptions": {
-    "ecmaVersion": 12
+    "ecmaVersion": 13
   },
   "plugins": [
   ],
