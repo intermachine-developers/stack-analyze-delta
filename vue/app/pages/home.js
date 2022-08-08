@@ -3,6 +3,8 @@ const { shell } = require('electron');
 const { reactive, computed, defineComponent } = require('vue');
 const Wappalyzer = require('wappalyzer');
 
+const { toast } = require('./toast');
+
 module.exports = defineComponent({
   name: 'Tech Stack',
   template: `
@@ -77,7 +79,7 @@ module.exports = defineComponent({
           stack.apps = technologies;
         }
       } catch (err) {
-        alert(err);
+        toast(err, 'is-danger');
       }
       await wappalyzer.destroy();
       stack.url = '';

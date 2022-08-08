@@ -8,6 +8,8 @@ const {
   osInfo
 } = require("systeminformation");
 
+const { toast } = require('./toast');
+
 // @vue/component
 module.exports = defineComponent({
   name: 'HardwareInformation',
@@ -132,7 +134,7 @@ module.exports = defineComponent({
         graphicsInfo.value =await graphics();
         osDetail.value = await osInfo();
       } catch(err) {
-        alert(err);
+        toast(err, 'is-danger');
       }
     });
     

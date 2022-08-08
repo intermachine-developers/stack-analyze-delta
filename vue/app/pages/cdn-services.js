@@ -2,6 +2,8 @@
 const { ref, defineComponent } = require('vue');
 const axios = require('axios');
 
+const { toast } = require('./toast');
+
 // @vue/component
 module.exports = defineComponent({
   name: 'cdnjs services',
@@ -76,9 +78,9 @@ module.exports = defineComponent({
 
         libraries.value = data.results;
       } catch (err) {
-        alert(err);
+        toast(err, 'is-danger');
       }
-      
+
       tech.value = '';
     };
 

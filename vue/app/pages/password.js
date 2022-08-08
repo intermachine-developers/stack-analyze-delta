@@ -1,6 +1,8 @@
 // modules
 const { ref, defineComponent } = require('vue');
 
+const { toast } = require('./toast');
+
 // @vue/component
 module.exports = defineComponent({
   name: 'Password',
@@ -55,10 +57,10 @@ module.exports = defineComponent({
     
     const copyPassword = async () => {
       if (generatedPassword.value === '') {
-        alert('password is empty please generate password?');
+        toast('password is empty please generate password?', 'is-danger');
       } else {
-        await navigator.clipboard.writeText(generatedPassword.value)
-        alert('Copied');
+        await navigator.clipboard.writeText(generatedPassword.value);
+        toast('Copied', 'is-primary');
       }
     };
     

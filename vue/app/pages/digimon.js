@@ -1,6 +1,8 @@
 const { ref, defineComponent } = require('vue');
 const axios = require('axios');
 
+const { toast } = require('./toast');
+
 module.exports = defineComponent({
   name: 'Digimon Cards',
   template: `
@@ -54,7 +56,7 @@ module.exports = defineComponent({
         });
         digimonList.value = data;
       } catch(err) {
-        alert(err);
+        toast(err, 'is-danger');
       }
       
       digimonName.value = '';
