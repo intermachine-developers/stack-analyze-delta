@@ -1,0 +1,68 @@
+.card, .loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+.card {
+	width: 85%;
+	margin-inline: auto;
+	display: grid;
+	grid-template-areas: "location location"
+		"data speed";
+	gap: 1rem;
+}
+
+.card-location {
+	font-size: 1.2em;
+	text-align: center;
+	grid-area: location;
+}
+
+.card-speed {
+	grid-area: speed;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.card-data {
+	grid-area: data;
+	list-style: none;
+	padding-top: 0;
+	margin: 0;
+	align-self: center;
+}
+
+.loading,
+.loading::after {
+  box-sizing: border-box;
+}
+
+.loading {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.loading::after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

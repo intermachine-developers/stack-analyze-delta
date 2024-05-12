@@ -1,0 +1,11 @@
+appId: com.stack-analyze-delta
+productName: stack-analyze delta
+asar: false
+files:
+  - 'app/**/*'
+  - 'icon.png'
+  - 'main.js'
+  - 'package.json'
+  - 'license.txt'
+  - 'package.json'
+copyright: stack-analyze

@@ -1,0 +1,14 @@
+album-info {
+	--image-shadow: #000;
+}
+
+.albums {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	gap: .6rem;
+	width: 85%;
+	height: 55vh;
+	margin: 10px auto 0;
+	padding: 6px;
+	overflow: auto;
+}

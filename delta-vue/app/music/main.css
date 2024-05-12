@@ -1,0 +1,14 @@
+.lyrics-container {
+    width: 90%;
+    height: 50vh;
+    margin-inline: auto;
+    margin-top: 10px;
+    padding-block: 20px;
+}
+
+.lyrics {
+    font-size: 1.2em;
+    height: inherit;
+    overflow: auto;
+    margin: 0.2rem 0.5rem;
+}

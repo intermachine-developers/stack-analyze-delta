@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digimon tcg service</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <delta-navbar></delta-navbar>
+        <section id="digimon-form" class="form glass">
+            <fieldset class="input-field">
+                <input id="digimon-input" class="input-field-text" type="text" placeholder="enter a digimon for search card">
+            </fieldset>
+            <fieldset class="input-field">
+                <button class="btn" type="submit">start search</button>
+            </fieldset>
+        </section>
+        <section id="digimon-list" class="card-list glass"></section>
+    </main>
+    <script defer src="renderer.js"></script>
+</body>
+
+</html>

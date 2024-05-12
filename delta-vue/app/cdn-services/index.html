@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>cdnjs services</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <delta-navbar></delta-navbar>
+    <main>
+        <section id="search-form" class="form glass">
+            <fieldset class="input-field">
+                <input id="search-tech" class="input-field-text" type="search" placeholder="search a js or css tech">
+            </fieldset>
+            <fieldset class="input-field">
+                <button id="btn" class="btn" type="submit">
+                    search tech
+                </button>
+            </fieldset>
+        </section>
+        
+        <section class="container glass">
+            <table class="table">
+                <thead class="table-head">
+                    <tr>
+                        <th>#</th>
+                        <th>tech name</th>
+                        <th>version</th>
+                        <th>copy link</th>
+                    </tr>
+                </thead>
+                <tbody id="tech-list" class="table-body"></tbody>
+            </table>
+        </section>
+    </main>
+    <script defer src="renderer.js"></script>
+</body>
+
+</html>

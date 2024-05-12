@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>deezer album search</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <delta-navbar></delta-navbar>
+    <main>
+        <section id="tech" class="form glass">
+            <fieldset class="input-field">
+                <input 
+                    id="query" 
+                    class="input-field-text"
+                    placeholder="enter a keywork for search"
+                    type="search"
+                >
+            </fieldset>
+            <fieldset class="input-field">
+                <button 
+                    id="btn"
+                    class="btn"
+                    type="submit"
+                >
+                    start query
+                </button>
+            </fieldset>
+        </section>
+        <section id="albums" class="albums"></section>
+    </main>
+    <script defer src="renderer.js"></script>
+</body>
+</html>

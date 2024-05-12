@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tech stack</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <delta-navbar></delta-navbar>
+    <main>
+        <section id="tech" class="form glass">
+            <fieldset class="input-field">
+                <input 
+                    id="website" 
+                    class="input-field-text"
+                    placeholder="enter a website"
+                    type="url"
+                >
+            </fieldset>
+            <fieldset class="input-field">
+                <button 
+                    id="btn"
+                    class="btn"
+                    type="submit"
+                    disabled
+                >
+                    analyze website
+                </button>
+            </fieldset>
+        </section>
+        <section id="stack" class="fixed-stack"></section>
+    </main>
+    <script defer src="renderer.js"></script>
+</body>
+</html>

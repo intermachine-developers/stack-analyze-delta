@@ -1,0 +1,29 @@
+{
+  "name": "stack-analyze-delta",
+  "version": "3.0.0",
+  "description": "stack-anlyze for show the new generation tools",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -l AppImage"
+  },
+  "keywords": [
+    "stack-analyze",
+    "delta software"
+  ],
+  "author": "stack-analyze",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "fast-speedtest-api": "^0.3.2",
+    "genius-lyrics": "^4.4.7",
+    "lyrics-finder": "^21.7.0",
+    "systeminformation": "^5.22.6",
+    "wapalyzer": "^6.10.65"
+  },
+  "devDependencies": {
+    "electron": "29.1.6",
+    "electron-builder": "^24.13.3",
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
